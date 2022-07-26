@@ -1,7 +1,4 @@
 
-/* resource "aws_ecr_repository" "worker" {
-  name = "worker"
-} */
 
 #Create an ECR repository
 resource "aws_ecr_repository" "worker" {

@@ -19,7 +19,7 @@
 resource "aws_launch_configuration" "ecs_launch_config" {
   image_id             = "ami-00b01c5b2db6f02f7"
   iam_instance_profile = aws_iam_instance_profile.ecs_agent.name
-  key_name             = "SisterMAariama"
+  key_name             = "SisterMAariama" #use your keypair
   security_groups      = [aws_security_group.ecs_sg.id]
   user_data            = "#!/bin/bash\necho ECS_CLUSTER=my-cluster >> /etc/ecs/ecs.config"
   instance_type        = "t2.micro"
